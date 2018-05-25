@@ -39,20 +39,23 @@
                   "name":"params",
                   "type":"Array",
                   "subType":
-                  {
-                   "type":"Struct",
-                    "subType":
-                    [
-                      {
-                        "name":"Key",
-                        "type":"String"
-                      },
-                      {
-                        "name":"Value",
-                        "type":"String"
-                      }
-                    ]
-                  }
+                  [
+                    {
+                      "name":"",
+                      "type":"Struct",
+                      "subType":
+                      [
+                        {
+                          "name":"Key",
+                          "type":"String"
+                        },
+                        {
+                          "name":"Value",
+                          "type":"String"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
               "returntype":"Bool"
@@ -74,12 +77,19 @@
                 "subType":
                 [
                   {
-                    "name":"Key",
-                    "type":"String"
-                  },
-                  {
-                    "name":"Value",
-                    "type":"String"
+                    "name":"",
+                    "type":"Struct",
+                    "subType":
+                    [
+                      {
+                        "name":"Key",
+                        "type":"String"
+                      },
+                      {
+                        "name":"Value",
+                        "type":"String"
+                      }
+                    ]
                   }
                 ]
               }
