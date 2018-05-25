@@ -113,10 +113,24 @@
                 {
                     "name":"PeerPubkeyList",
                     "type":"Array"
+                    "subType": 
+    		        [
+    			        {
+    				        "name": "",
+    				        "type": "String"
+    			        }
+    		        ]
                 },
                 {
                     "name":"PosList",
                     "type":"Array"
+                    "subType": 
+    		        [
+    			        {
+    				        "name": "",
+    				        "type": "Int"
+    			        }
+    		        ]
                 }
             ],
             "returntype":"Bool"
@@ -132,10 +146,24 @@
                 {
                     "name":"PeerPubkeyList",
                     "type":"Array"
+                    "subType": 
+    		        [
+    			        {
+    				        "name": "",
+    				        "type": "String"
+    			        }
+    		        ]
                 },
                 {
                     "name":"WithdrawList",
                     "type":"Array"
+                    "subType": 
+    		        [
+    			        {
+    				        "name": "",
+    				        "type": "Int"
+    			        }
+    		        ]
                 }
             ],
             "returntype":"Bool"
