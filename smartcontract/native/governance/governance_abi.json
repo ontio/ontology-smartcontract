@@ -1,5 +1,5 @@
 {
-    "hash":"0000000000000000000000000000000000000007",
+    "hash":"ff00000000000000000000000000000000000007",
     "functions":
     [
         {
@@ -7,10 +7,10 @@
             "parameters":
             [
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
-            "name":"registerSyncNode",
+            "name":"registerCandidate",
             "parameters":
             [
                 {
@@ -24,35 +24,17 @@
                 {
                     "name":"InitPos",
                     "type":"Int"
-                }
-            ],
-            "returntype":"Bool"
-        },
-        {
-            "name":"approveSyncNode",
-            "parameters":
-            [
-                {
-                    "name":"PeerPubkey",
-                    "type":"String"
-                }
-            ],
-            "returntype":"Bool"
-        },
-        {
-            "name":"registerCandidate",
-            "parameters":
-            [
-                {
-                    "name":"PeerPubkey",
-                    "type":"String"
                 },
                 {
-                    "name":"Address",
-                    "type":"Address"
+                    "name":"Caller",
+                    "type":"ByteArray"
+                },
+                {
+                    "name":"KeyNo",
+                    "type":"Int"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"approveCandidate",
@@ -63,7 +45,18 @@
                     "type":"String"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
+        },
+        {
+            "name":"rejectCandidate",
+            "parameters":
+            [
+              {
+                "name":"PeerPubkey",
+                "type":"String"
+              }
+            ],
+            "returnType":"Bool"
         },
         {
             "name":"blackNode",
@@ -74,7 +67,7 @@
                     "type":"String"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"whiteNode",
@@ -85,7 +78,7 @@
                     "type":"String"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"quitNode",
@@ -100,7 +93,7 @@
                     "type":"Address"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"voteForPeer",
@@ -133,7 +126,7 @@
                     ]
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"unVoteForPeer",
@@ -166,7 +159,7 @@
                     ]
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"withdraw",
@@ -199,44 +192,14 @@
                     ]
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"commitDpos",
             "parameters":
             [
             ],
-            "returntype":"Bool"
-        },
-        {
-            "name":"voteCommitDpos",
-            "parameters":
-            [
-                {
-                    "name":"Address",
-                    "type":"Address"
-                },
-                {
-                    "name":"Pos",
-                    "type":"Int"
-                }
-            ],
-            "returntype":"Bool"
-        },
-        {
-            "name":"unVoteCommitDpos",
-            "parameters":
-            [
-                {
-                    "name":"Address",
-                    "type":"Address"
-                },
-                {
-                    "name":"Pos",
-                    "type":"Int"
-                }
-            ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"updateConfig",
@@ -275,16 +238,12 @@
                     "type":"Int"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
         },
         {
             "name":"updateGlobalParam",
             "parameters":
             [
-                {
-                    "name":"SyncNodeFee",
-                    "type":"Int"
-                },
                 {
                     "name":"CandidateFee",
                     "type":"Int"
@@ -294,15 +253,11 @@
                     "type":"Int"
                 },
                 {
-                    "name":"PosCommitTrigger",
-                    "type":"Int"
-                },
-                {
                     "name":"CandidateNum",
                     "type":"Int"
                 },
                 {
-                    "name":"SyncNodeNum",
+                    "name":"PosLimit",
                     "type":"Int"
                 },
                 {
@@ -314,22 +269,55 @@
                     "type":"Int"
                 },
                 {
-                    "name":"C",
+                    "name":"Yita",
                     "type":"Int"
                 },
                 {
-                    "name":"Yita",
+                    "name":"Penalty",
                     "type":"Int"
                 }
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
+        },
+        {
+            "name":"updateSplitCurve",
+            "parameters":
+            [
+                {
+                    "name":"Yi",
+                    "type":"Array",
+                    "subType":
+                    [
+                        {
+                            "name": "",
+                            "type": "Int"
+                        }
+                    ]
+                }
+            ],
+            "returnType":"Bool"
         },
         {
             "name":"callSplit",
             "parameters":
             [
             ],
-            "returntype":"Bool"
+            "returnType":"Bool"
+        },
+        {
+            "name":"transferPenalty",
+            "parameters":
+            [
+                {
+                    "name":"PeerPubkey",
+                    "type":"String"
+                },
+                {
+                    "name":"Address",
+                    "type":"Address"
+                }
+            ],
+            "returnType":"Bool"
         }
     ],
     "events":
