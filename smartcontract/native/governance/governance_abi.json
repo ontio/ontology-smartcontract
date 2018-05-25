@@ -136,6 +136,39 @@
             "returntype":"Bool"
         },
         {
+            "name":"unVoteForPeer",
+            "parameters":
+            [
+                {
+                    "name":"Address",
+                    "type":"Address"
+                },
+                {
+                    "name":"PeerPubkeyList",
+                    "type":"Array",
+                    "subType":
+                    [
+                        {
+                            "name": "",
+                            "type": "String"
+                        }
+                    ]
+                },
+                {
+                    "name":"PosList",
+                    "type":"Array",
+                    "subType":
+                    [
+                        {
+                            "name": "",
+                            "type": "Int"
+                        }
+                    ]
+                }
+            ],
+            "returntype":"Bool"
+        },
+        {
             "name":"withdraw",
             "parameters":
             [
@@ -177,6 +210,21 @@
         },
         {
             "name":"voteCommitDpos",
+            "parameters":
+            [
+                {
+                    "name":"Address",
+                    "type":"Address"
+                },
+                {
+                    "name":"Pos",
+                    "type":"Int"
+                }
+            ],
+            "returntype":"Bool"
+        },
+        {
+            "name":"unVoteCommitDpos",
             "parameters":
             [
                 {
