@@ -3,14 +3,14 @@
     "functions":
     [
         {
-            "name":"OngInit",
+            "name":"init",
             "parameters":
             [
             ],
             "returntype":"bool"
         },
         {
-            "name":"OngTransfer",
+            "name":"transfer",
             "parameters":
             [
                 {
@@ -36,7 +36,7 @@
             "returntype":"bool"
         },
         {
-            "name":"OngApprove",
+            "name":"approve",
             "parameters":
             [
                 {
@@ -55,7 +55,7 @@
             "returntype":"bool"
         },
         {
-            "name":"OngTransferFrom",
+            "name":"transferFrom",
             "parameters":
             [
                 {
@@ -78,35 +78,35 @@
             "returntype":"bool"
         },
        {
-            "name":"OngName",
+            "name":"name",
             "parameters":
             [
             ],
             "returntype":"string"
         },
         {
-            "name":"OngSymbol",
+            "name":"symbol",
             "parameters":
             [
             ],
             "returntype":"string"
         },
         {
-            "name":"OngDecimals",
+            "name":"decimals",
             "parameters":
             [
             ],
             "returntype":"int"
         },
         {
-            "name":"OngTotalSupply",
+            "name":"totalSupply",
             "parameters":
             [
             ],
             "returntype":"int64"
         },
         {
-            "name":"OngBalanceOf",
+            "name":"balanceOf",
             "parameters":
             [
                 {
@@ -117,7 +117,7 @@
             "returntype":"int"
         },
         {
-            "name":"OngAllowance",
+            "name":"allowance",
             "parameters":
             [
                 {

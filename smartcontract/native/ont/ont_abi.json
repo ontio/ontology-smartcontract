@@ -3,14 +3,14 @@
     "functions":
     [
         {
-            "name":"OntInit",
+            "name":"init",
             "parameters":
             [
             ],
             "returntype":"Bool"
         },
         {
-            "name":"OntTransfer",
+            "name":"transfer",
             "parameters":
             [
                 {
@@ -36,7 +36,7 @@
             "returntype":"Bool"
         },
         {
-            "name":"OntApprove",
+            "name":"approve",
             "parameters":
             [
                 {
@@ -55,7 +55,7 @@
             "returntype":"Bool"
         },
         {
-            "name":"OntTransferFrom",
+            "name":"transferFrom",
             "parameters":
             [
                 {
@@ -78,35 +78,35 @@
             "returntype":"Bool"
         },
        {
-            "name":"OntName",
+            "name":"name",
             "parameters":
             [
             ],
             "returntype":"String"
         },
         {
-            "name":"OntSymbol",
+            "name":"symbol",
             "parameters":
             [
             ],
             "returntype":"String"
         },
         {
-            "name":"OntDecimals",
+            "name":"decimals",
             "parameters":
             [
             ],
             "returntype":"Int"
         },
         {
-            "name":"OntTotalSupply",
+            "name":"totalSupply",
             "parameters":
             [
             ],
             "returntype":"Int"
         },
         {
-            "name":"OntBalanceOf",
+            "name":"balanceOf",
             "parameters":
             [
                 {
@@ -117,7 +117,7 @@
             "returntype":"Int"
         },
         {
-            "name":"OntAllowance",
+            "name":"allowance",
             "parameters":
             [
                 {
