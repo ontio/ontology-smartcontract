@@ -13,20 +13,25 @@
             "name":"OngTransfer",
             "parameters":
             [
-                [
-                    {
-                        "name":"from",
-                        "type":"Address"
-                    },
-                    {
-                        "name":"to",
-                        "type":"Address"
-                    },
-                    {
-                        "name":"value",
-                        "type":"int"
-                    }
-                ]
+                {
+                    "name": "transfers",
+                    "type": "Struct",
+                    "subType":
+                    [
+                        {
+                            "name":"from",
+                            "type":"Address"
+                        },
+                        {
+                            "name":"to",
+                            "type":"Address"
+                        },
+                        {
+                            "name":"value",
+                            "type":"Int"
+                        }
+                    ]
+                }
             ],
             "returntype":"bool"
         },
