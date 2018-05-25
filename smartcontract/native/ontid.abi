@@ -1,0 +1,300 @@
+{
+	"hash": "ff00000000000000000000000000000000000003",
+	"functions": [
+		{
+			"name":"regIDWithPublicKey",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "addKey",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "new public key",
+					"type": "ByteArray"
+				},
+				{
+					"name": "user's public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "removeKey",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "removed key",
+					"type": "ByteArray"
+				},
+				{
+					"name": "user's public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "addRecovery",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "recovery",
+					"type": "Address"
+				},
+				{
+					"name": "userPublicKey",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "changeRecovery",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "new recovery",
+					"type": "Address"
+				},
+				{
+					"name": "old recovery",
+					"type":"Address"
+				}
+			]
+		},
+		{
+			"name": "regIDWithAttributes",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "public key",
+					"type": "ByteArray"
+				},
+				{
+					"name": "attributes",
+					"type": "Array",
+					"subType": [
+						{
+							"name": "",
+							"type": "Struct",
+							"subType": [
+								{
+									"name": "key",
+									"type": "ByteArray"
+								},
+								{
+									"name": "type",
+									"type": "ByteArray"
+								},
+								{
+									"name": "value",
+									"type": "ByteArray"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "addAttributes",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "attributes",
+					"type": "Array",
+					"subType": [
+						{
+							"name": "",
+							"type": "Struct",
+							"subType": [
+								{
+									"name": "path",
+									"type": "ByteArray"
+								},
+								{
+									"name": "type",
+									"type": "ByteArray"
+								},
+								{
+									"name": "value",
+									"type": "ByteArray"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user's public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "removeAttribute",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "attribute path",
+					"type": "ByteArray"
+				},
+				{
+					"name": "user's public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "getPublicKeys",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				}
+			]
+		},
+		{
+			"name": "getKeyState",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "key index",
+					"type": "Int"
+				}
+			]
+		},
+		{
+			"name": "getAttributes",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				}
+			]
+		},
+		{
+			"name": "getDDO",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				}
+			]
+		},
+		{
+			"name": "verifySignature",
+			"parameters": [
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "key index",
+					"type": "uint"
+				}
+			]
+		}
+	],
+	"events": [
+		{
+			"name": "Register",
+			"parameters": [
+				{
+					"name": "operation",
+					"type": "String"
+				},
+				{
+					"name": "id",
+					"type": "String"
+				}
+			]
+		},
+		{
+			"name": "PublicKey",
+			"parameters": [
+				{
+					"name": "operation",
+					"type": "String"
+				},
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "index",
+					"type": "Int"
+				},
+				{
+					"name": "public key",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "Attribute",
+			"parameters": [
+				{
+					"name": "operation",
+					"type": "String"
+				},
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "attribute path",
+					"type": "ByteArray"
+				}
+			]
+		},
+		{
+			"name": "Recovery",
+			"parameters": [
+				{
+					"name": "operation",
+					"type": "String"
+				},
+				{
+					"name": "id",
+					"type": "String"
+				},
+				{
+					"name": "recovery address",
+					"type": "Address"
+				}
+			]
+		}
+	]
+}
