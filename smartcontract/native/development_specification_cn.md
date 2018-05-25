@@ -250,17 +250,42 @@ serialization.WriteVarUint(w, value)
 serialization.WriteBool(w, value)
 ```
 
+10、错误处理
+
+错误区分为系统级别错误和DApp内部错误，系统错误使用SysErr标识，应用内部错误使用AppErr标识
+```
+type ErrType byte
+
+const (
+	SysErr ErrType = iota
+	AppErr
+)
+
+type Error struct {
+	Type ErrType
+	Err error
+}
+```
+
+**调用方法**
+
+```
+func NewAppErr(errMsg string) *Error  //新建带错误信息的应用错误
+func NewSysErr(errMsg string) *Error //新建带错误信息的系统错误
+func NewAppErrf(format string, params ...interface{}) *Error //新建带格式的应用错误
+func NewSysErrf(format string, params ...interface{}) *Error //新建带格式的系统错误
+```
 
 
-10、**native合约地址**
+11、**native合约地址**
 
 合约名称 | 合约地址
 ---|---
-ONT Token | ff00000000000000000000000000000000000001
-ONG Token | ff00000000000000000000000000000000000002
-ONT ID | ff00000000000000000000000000000000000003
-Global Params | ff00000000000000000000000000000000000004
-Oracle | ff00000000000000000000000000000000000005
-Authorization Manager(Auth) | ff00000000000000000000000000000000000006
-Governance | ff00000000000000000000000000000000000007
-DDXF(Decentralized Exchange) | ff00000000000000000000000000000000000008
+ONT Token | 0000000000000000000000000000000000000001
+ONG Token | 0000000000000000000000000000000000000002
+ONT ID | 0000000000000000000000000000000000000003
+Global Params | 0000000000000000000000000000000000000004
+Oracle | 0000000000000000000000000000000000000005
+Authorization Manager(Auth) | 0000000000000000000000000000000000000006
+Governance | 0000000000000000000000000000000000000007
+DDXF(Decentralized Exchange) | 0000000000000000000000000000000000000008
