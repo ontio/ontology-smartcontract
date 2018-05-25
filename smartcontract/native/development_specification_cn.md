@@ -104,35 +104,163 @@ type NativeService struct {
 ```
 在NativeService中定义有Version属性，该属性为当前Contract的版本号，若native合约需要升级可在实现方法中调用该属性编写不同的逻辑。
 
-9、ABI基础类型
+9、ABI
 
-序列化反序列化基础类型支持
+**基础类型**
 ```
-bool
-byte
-[]byte
-string
-address
-uint256
-array
-int
-struct
+Bool
+Byte
+ByteArray
+String
+Address
+Uint256
+Array
+Int
+Struct
+
 ```
+
+**示例**
+```
+{
+    "hash":"0000000000000000000000000000000000000001",
+    "functions":
+    [
+        {
+            "name": "func",
+            "parameters": 
+            [
+                {   
+                    "name": "arg1",
+        		    "type": "Bool"
+    	        },
+            	{
+            		"name": "arg2",
+            		"type": "Byte"
+            	},
+            	{
+            		"name": "arg3",
+            		"type": "ByteArray"
+            	},
+            	{
+            		"name": "arg4",
+            		"type": "Address"
+            	},
+            	{
+            		"name": "arg5",
+            		"type": "Uint256",
+            	},
+            	{
+            		"name": "arg6",
+            		"type": "Array",
+            		"subType": 
+            		[
+            			{
+            				"name": "",
+            				"type": "Int"
+            			}
+            		]
+            	},
+            	{
+            		"name": "arg7",
+            		"type": "Int"
+            	},
+            	{
+            		"name": "arg8",
+            		"type": "Struct",
+            		"subType": 
+            		[
+            			{
+            				"name": "attr1",
+            				"type": "Int"
+            			}
+            		]
+            	}
+            ],
+            "returnType": "Int"
+        }
+    ],
+    "events":
+    [
+        {
+            "name":"event",
+            "parameters":
+            [
+                {
+                    "name":"attr",
+                    "type":"Int"
+                }
+            ]
+        }
+    ]
+}
+```
+**序列化方式**
+
+*Int序列化*
+```
+serialization.WriteVarUint(w, uint64(value))
+```
+*String序列化*
+
+```
+serialization.WriteString(w, value)
+```
+*Bool序列化*
+
+```
+serialization.WriteBool(w, value)
+```
+*Byte序列化*
+
+```
+serialization.WriteByte(w, value)
+```
+*ByteArray序列化*
+
+```
+serialization.WriteVarBytes(w, value)
+```
+*Address序列化*
+
+```
+value.Serialize(w)
+```
+*Uint256序列化*
+
+```
+value.Serialize(w)
+```
+*Array序列化*
+
+```
+serialization.WriteVarUint(w, uint64(len(value)))
+for _, v := range value {
+    v.Serialize(w) (默认value是结构体数组，不同数组实现不同的序列化方式)
+}
+```
+*Struct序列化*
+
+```
+type Value strcut {
+    P1 uint64
+    P2 bool
+}
+serialization.WriteVarUint(w, value)
+serialization.WriteBool(w, value)
+```
+
+
 
 10、**native合约地址**
 
 合约名称 | 合约地址
 ---|---
-ONT Token | 0000000000000000000000000000000000000001
-ONG Token | 0000000000000000000000000000000000000002
-ONT ID | 0000000000000000000000000000000000000003
-Global Params | 0000000000000000000000000000000000000004
-Oracle | 0000000000000000000000000000000000000005
-Authorization Manager(Auth) | 0000000000000000000000000000000000000006
-Governance | 0000000000000000000000000000000000000007
-DDXF(Decentralized Exchange) | 0000000000000000000000000000000000000008
-
-
-
-
-
+ONT Token | ff00000000000000000000000000000000000001
+ONG Token | ff00000000000000000000000000000000000002
+ONT ID | ff00000000000000000000000000000000000003
+Global Params | ff00000000000000000000000000000000000004
+Oracle | ff00000000000000000000000000000000000005
+Authorization Manager(Auth) | ff00000000000000000000000000000000000006
+Governance | ff00000000000000000000000000000000000007
+DDXF(Decentralized Exchange) | ff00000000000000000000000000000000000008
