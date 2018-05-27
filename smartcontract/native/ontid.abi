@@ -9,7 +9,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"public key",
+                    "name":"publicKey",
                     "type":"ByteArray"
                 }
             ],
@@ -23,11 +23,11 @@
                     "type":"String"
                 },
                 {
-                    "name":"new public key",
+                    "name":"newPublicKey",
                     "type":"ByteArray"
                 },
                 {
-                    "name":"user's public key",
+                    "name":"userxPublicKey",
                     "type":"ByteArray"
                 }
             ],
@@ -41,11 +41,11 @@
                     "type":"String"
                 },
                 {
-                    "name":"removed key",
+                    "name":"removedKey",
                     "type":"ByteArray"
                 },
                 {
-                    "name":"user's public key",
+                    "name":"userPublicKey",
                     "type":"ByteArray"
                 }
             ],
@@ -77,11 +77,11 @@
                     "type":"String"
                 },
                 {
-                    "name":"new recovery",
+                    "name":"newRecovery",
                     "type":"Address"
                 },
                 {
-                    "name":"old recovery",
+                    "name":"oldRecovery",
                     "type":"Address"
                 }
             ],
@@ -95,7 +95,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"public key",
+                    "name":"publicKey",
                     "type":"ByteArray"
                 },
                 {
@@ -157,7 +157,7 @@
                     ]
                 },
                 {
-                    "name":"user's public key",
+                    "name":"userPublicKey",
                     "type":"ByteArray"
                 }
             ],
@@ -171,11 +171,11 @@
                     "type":"String"
                 },
                 {
-                    "name":"attribute path",
+                    "name":"attributePath",
                     "type":"ByteArray"
                 },
                 {
-                    "name":"user's public key",
+                    "name":"userPublicKey",
                     "type":"ByteArray"
                 }
             ],
@@ -199,7 +199,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"key index",
+                    "name":"keyIndex",
                     "type":"Int"
                 }
             ],
@@ -233,7 +233,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"key index",
+                    "name":"keyIndex",
                     "type":"uint"
                 }
             ],
@@ -270,7 +270,7 @@
                     "type":"Int"
                 },
                 {
-                    "name":"public key",
+                    "name":"publicKey",
                     "type":"ByteArray"
                 }
             ]
@@ -287,7 +287,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"attribute path",
+                    "name":"attributePath",
                     "type":"ByteArray"
                 }
             ]
@@ -304,7 +304,7 @@
                     "type":"String"
                 },
                 {
-                    "name":"recovery address",
+                    "name":"recoveryAddress",
                     "type":"Address"
                 }
             ]
