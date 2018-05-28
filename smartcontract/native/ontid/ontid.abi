@@ -234,7 +234,7 @@
                 },
                 {
                     "name":"keyIndex",
-                    "type":"uint"
+                    "type":"Int"
                 }
             ],
             "returnType":"Bool"
