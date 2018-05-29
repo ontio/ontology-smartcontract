@@ -291,7 +291,7 @@ Method: verifySignature
 
 Argument:
     0    String    user's ID
-    1    Int      key index
+    1    Int       key index
 
 Return: true | false
 ```
