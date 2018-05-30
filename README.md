@@ -1,7 +1,7 @@
 [中文](README_cn.md) | English
 
 <h1 align="center">Ontology Smart Contract</h1>
-<p align="center" class="version">Version V0.7.0 </p>
+<p align="center" class="version">Version V0.8.0 </p>
 
 ## What is a smart contract?
 
