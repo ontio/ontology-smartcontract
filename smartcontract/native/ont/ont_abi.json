@@ -1,5 +1,5 @@
 {
-    "hash":"0000000000000000000000000000000000000001",
+    "hash":"ff00000000000000000000000000000000000001",
     "functions":
     [
         {
@@ -15,20 +15,26 @@
             [
                 {
                     "name": "transfers",
-                    "type": "Struct",
+                    "type": "Array",
                     "subType":
                     [
                         {
-                            "name":"from",
-                            "type":"Address"
-                        },
-                        {
-                            "name":"to",
-                            "type":"Address"
-                        },
-                        {
-                            "name":"value",
-                            "type":"Int"
+                            "name":"",
+                            "type":"Struct",
+                            "subType":[
+                                {
+                                    "name":"from",
+                                    "type":"Address"
+                                },
+                                {
+                                    "name":"to",
+                                    "type":"Address"
+                                },
+                                {
+                                    "name":"value",
+                                    "type":"Int"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -112,7 +118,7 @@
                 {
                     "name":"account",
                     "type":"Address"
-                },
+                }
             ],
             "returntype":"Int"
         },
@@ -121,9 +127,13 @@
             "parameters":
             [
                 {
-                    "name":"account",
+                    "name":"from",
                     "type":"Address"
                 },
+                {
+                    "name":"to",
+                    "type":"Address"
+                }
             ],
             "returntype":"Int"
         }
