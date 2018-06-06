@@ -1,33 +1,34 @@
-## Ontology Fee Model
+# Ontology Fee Model
 
+<h1 align="center">Ontology 智能合约 费用总体说明</h1>
 
-### GAS Limit
+## 1. GAS Limit
 Gas limit是在执行智能合约的opcode过程中计步时使用，理论上智能合约越复杂，需要的gas limit的数量越高，ontology交易最低Gas limit 数量是30000
 
-### GAS Price
+## 2. GAS Price
 Gas price是给执行opcode定价，gas price的价格越高，共识节点会优先打包该笔交易。
 
-### Transaction Fee
+## 3. Transaction Fee
 
 发起一笔交易，在确定gas limit 和 gas price 之后，实际的交易费分以下三种情形
 
-#### 1. 执行opcode步数等于gas limit
+### 执行opcode步数等于gas limit
 
 **transaction fee =  gas price * gas limit**
 
-#### 2. 执行opcode步数大于gas limit
+### 执行opcode步数大于gas limit
 
 **transaction fee =  gas price * gas limit**
 
 交易失败，但gas不会退还
 
-#### 3. 执行opcode步数小于gas limit
+### 执行opcode步数小于gas limit
 **transaction fee =  gas price * (opcode实际消耗)**
 
 多余的gas 会退还
 
 
-### opcode 定价
+## opcode 定价
 
 | Function         | Gas limit |
 | ---------------- | --------- |
