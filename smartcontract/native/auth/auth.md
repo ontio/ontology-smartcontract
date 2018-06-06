@@ -170,7 +170,7 @@ namespace Example
 
     public class AppContract : SmartContract
     {
-        public static readonly byte[] adminOntID = { 0x01, 0x02 };
+        public static readonly byte[] adminOntID = { 0x01, 0x00, 0xae, 0xb1, 0x0f, 0xf2, 0x91, 0x9b, 0xfe, 0x14, 0xdc, 0x43, 0x28, 0x99, 0xd3, 0xb6, 0x49, 0x89, 0x31, 0x19 };
 
         [Appcall("ff00000000000000000000000000000000000006")]//ScriptHash
         public static extern byte[] AuthContract(string op, object[] args);
@@ -196,12 +196,12 @@ namespace Example
             return true;
         }
 
-        public static bool init(object[] args)
+        public static bool init()
         {
             object[] _args = new object[1]; 
 
             initContractAdminParam param;
-            param.adminOntID = (byte[]) args[0];
+            param.adminOntID = adminOntID;
 
             _args[0] = Neo.SmartContract.Framework.Helper.Serialize(param);
             byte[] ret = AuthContract("initContractAdmin", _args);
@@ -215,7 +215,7 @@ namespace Example
 
             verifyTokenParam param;
             param.contractAddr = ExecutionEngine.ExecutingScriptHash;
-            param.fn = operation.AsByteArray();
+            param.fn = operation;
             param.caller = (byte[])token[0];
             param.keyNo = (int)token[1];
 
