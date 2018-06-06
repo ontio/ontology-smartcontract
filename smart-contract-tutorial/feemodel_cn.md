@@ -66,7 +66,7 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 
 
 
-!image](./images/transferbefore.jpeg)
+!image](./images/transferbefore.png)
 
 - 转账：
 ```
@@ -75,7 +75,7 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 
 
 
-!image](./images/transferafter.jpeg)
+!image](./images/transferafter.png)
 
 
 
