@@ -64,10 +64,18 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 ./ontology asset balance TA7FwLmuX6qMcWTgZtUxt6tjzFgfaBM5sz
 ```
 
+
+
+!image](./images/transferbefore.jpeg)
+
 - 转账：
 ```
 ./ontology asset transfer --from TA7FwLmuX6qMcWTgZtUxt6tjzFgfaBM5sz  --to TA7FwLmuX6qMcWTgZtUxt6tjzFgfaBM5sz  --amount 1000 --gasprice 5 --gaslimit 40000
 ```
+
+
+
+!image](./images/transferafter.jpeg)
 
 
 
