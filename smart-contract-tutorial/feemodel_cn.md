@@ -29,7 +29,7 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 
 ## 4. opcode 定价
 
-| Function         | Gas price |
+| Function         | Gas limit |
 | ---------------- | --------- |
 | GetHeader        | 100       |
 | GetBlock         | 200       |
