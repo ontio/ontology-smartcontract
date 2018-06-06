@@ -9,7 +9,7 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 
 ## 3. Transaction Fee
 
-发起一笔交易，在确定gas limit 和 gas price 之后，实际的交易费分以下三种情形
+交易费是gas limit 和 gas price乘积，实际的交易费分以下三种情形
 
 ### 执行opcode步数等于gas limit
 
