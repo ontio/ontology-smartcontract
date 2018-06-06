@@ -11,17 +11,17 @@ Gas price是给执行opcode定价，gas price的价格越高，共识节点会�
 
 交易费是gas limit 和 gas price乘积，实际的交易费分以下三种情形
 
-### 执行opcode步数等于gas limit
+###1. 执行opcode步数等于gas limit
 
-**transaction fee =  gas price * gas limit**
+**. transaction fee =  gas price * gas limit**
 
-### 执行opcode步数大于gas limit
+###2. 执行opcode步数大于gas limit
 
 **transaction fee =  gas price * gas limit**
 
 交易失败，但gas不会退还
 
-### 执行opcode步数小于gas limit
+###3. 执行opcode步数小于gas limit
 **transaction fee =  gas price * (opcode实际消耗)**
 
 多余的gas 会退还
