@@ -2,7 +2,7 @@
 <h1 align="center">Ontology 智能合约 费用模型</h1>
 
 ## 1. GAS Limit
-Gas limit是在执行智能合约的opcode过程中计步时使用，理论上智能合约越复杂，需要的gas limit的数量越高，ontology交易最低Gas limit 数量是30000
+Gas limit是在执行智能合约的opcode过程中计步时使用，理论上智能合约越复杂，需要的gas limit的数量越高，ontology交易设定最低的Gas limit数量是30000
 
 ## 2. GAS Price
 Gas price是给执行opcode定价，gas price的价格越高，共识节点会优先打包该笔交易。
