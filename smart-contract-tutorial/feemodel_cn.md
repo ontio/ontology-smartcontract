@@ -6,7 +6,7 @@
 ## 1、费用模型
 
 ### GAS Limit
-Gas limit是在执行智能合约的opcode过程中计步时使用，理论上智能合约越复杂，需要的gas limit的数量越高，ontology交易设定最低的Gas limit数量是30000
+Gas limit是在执行智能合约的opcode过程中计步时使用，理论上智能合约越复杂，需要的gas limit的数量越高，ontology交易设定最低的Gas limit数量是20000
 
 ### GAS Price
 Gas price是给执行opcode定价，gas price的价格越高，共识节点会优先打包该笔交易。
@@ -28,11 +28,11 @@ transaction fee =  gas price * gas limit
 - 执行opcode步数小于gas limit
 transaction fee =  gas price * (opcode实际消耗)
 
-多余的gas 会退还，但最低消费是30000
+多余的gas 会退还，但最低消费是20000
 
 
 
-**所有ONT,ONG的转账GAS消费默认都是30000**
+**所有ONT,ONG的转账GAS LIMIT消费固定都是20000**
 
 
 
