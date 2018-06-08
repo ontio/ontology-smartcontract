@@ -26,6 +26,5 @@ namespace NativeContract
 
             return Native.Invoke(0, address, "transfer", param);
         }
-
     }
 }
