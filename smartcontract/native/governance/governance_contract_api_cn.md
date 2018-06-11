@@ -54,7 +54,7 @@
 方法名："blackNode"
 
 参数：
-0       String       节点公钥
+0       Array{String}   要放入黑名单的节点列表
 
 返回值：bool， error
 ```

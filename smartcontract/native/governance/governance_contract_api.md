@@ -56,7 +56,7 @@ function: review by administrator, put a node into black list. Trigger node quit
 method: "blackNode"
 
 arguments:
-0       String       peer public key
+0       Array{String}       peer public key list
 
 returns: bool， error
 ```

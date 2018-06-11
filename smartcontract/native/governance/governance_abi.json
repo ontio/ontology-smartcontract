@@ -1,5 +1,5 @@
 {
-    "hash":"ff00000000000000000000000000000000000007",
+    "hash":"0000000000000000000000000000000000000007",
     "functions":
     [
         {
@@ -51,10 +51,10 @@
             "name":"rejectCandidate",
             "parameters":
             [
-              {
-                "name":"PeerPubkey",
-                "type":"String"
-              }
+                {
+                    "name":"PeerPubkey",
+                    "type":"String"
+                }
             ],
             "returnType":"Bool"
         },
@@ -63,8 +63,15 @@
             "parameters":
             [
                 {
-                    "name":"PeerPubkey",
-                    "type":"String"
+                    "name":"PeerPubkeyList",
+                    "type":"Array",
+                    "subType":
+                    [
+                        {
+                            "name": "",
+                            "type": "String"
+                        }
+                    ]
                 }
             ],
             "returnType":"Bool"
@@ -247,7 +254,7 @@
                 {
                     "name":"CandidateFee",
                     "type":"Int"
-                }, 
+                },
                 {
                     "name":"MinInitStake",
                     "type":"Int"
