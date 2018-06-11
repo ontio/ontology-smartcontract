@@ -1,8 +1,5 @@
 <h1 align="center">Ontology 智能合约费用模型</h1>
 
-[TOC]
-
-
 ## 1、费用模型
 
 ### GAS Limit
