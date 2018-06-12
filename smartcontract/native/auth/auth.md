@@ -36,7 +36,7 @@ In the following, we say that the contract that requires rights management funct
     Method: transfer
 
     Argument:
-        contractAddr    ByteArray  the address of the target contract
+        contractAddr    Address    the address of the target contract
         newAdminOntID   ByteArray  new Admin's ONT ID
         keyNo           Int        the index of admin's public key to invoke this api  
 
@@ -53,7 +53,7 @@ In the following, we say that the contract that requires rights management funct
     Method: verifyToken
 
     Argument: 
-        contractAddr    ByteArray  the address of the target contract
+        contractAddr    Address    the address of the target contract
         callerOntID     ByteArray  the caller's ONT ID
         funcName        String     the name of the function invoked 
         keyNo           Int        the index of caller's public key to invoke this api  
@@ -70,7 +70,7 @@ In the following, we say that the contract that requires rights management funct
     Method: assignFuncsToRole
 
     Argument: 
-        contractAddr    ByteArray      the address of the target contract
+        contractAddr    Address        the address of the target contract
         adminOntID      ByteArray      admin's ONT ID
         role            ByteArray      the role 
         funcNames       StringArray    the name of the function invoked 
@@ -87,7 +87,7 @@ In the following, we say that the contract that requires rights management funct
     Method: assignOntIDsToRole
 
     Argument: 
-        contractAddr    ByteArray      the address of the target contract
+        contractAddr    Address        the address of the target contract
         adminOntID      ByteArray      admin's ONT ID
         role            ByteArray      the role 
         ontIDs          Byte[][]       an array of ONT ID 
@@ -107,7 +107,7 @@ In the following, we say that the contract that requires rights management funct
     Method: delegate
 
     Argument: 
-        contractAddr    ByteArray      the address of the target contract
+        contractAddr    Address        the address of the target contract
         from            ByteArray      ONT ID of role's owner
         to              ByteArray      ONT ID of delegator
         period          Int            the period this delegation will be valid
@@ -127,7 +127,7 @@ In the following, we say that the contract that requires rights management funct
     Method: withdraw
 
     Argument: 
-        contractAddr    ByteArray      the address of the target contract
+        contractAddr    Address        the address of the target contract
         initiator       ByteArray      ONT ID of initiator's owner
         delegate        ByteArray      ONT ID of delegator
         role            ByteArray      the role withdrawn
@@ -164,20 +164,25 @@ namespace Example
     {
         public byte[] contractAddr;
         public byte[] caller;
-        public byte[] fn;
+        public string fn;
         public int keyNo;
     }
 
     public class AppContract : SmartContract
     {
-        public static readonly byte[] adminOntID = { 0x01, 0x00, 0xae, 0xb1, 0x0f, 0xf2, 0x91, 0x9b, 0xfe, 0x14, 0xdc, 0x43, 0x28, 0x99, 0xd3, 0xb6, 0x49, 0x89, 0x31, 0x19 };
-
-        [Appcall("ff00000000000000000000000000000000000006")]//ScriptHash
-        public static extern byte[] AuthContract(string op, object[] args);
+        //the admin ONT ID of this contract must be hardcoded.
+        public static readonly byte[] adminOntID = { 
+                0x01, 0x00, 0xae, 0xb1, 0x0f, 0xf2, 0x91, 0x9b,
+                0xfe, 0x14, 0xdc, 0x43, 0x28, 0x99, 0xd3, 0xb6, 
+                0x49, 0x89, 0x31, 0x19 };
+        public static readonly byte[] authContractAddr = {
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x06 };
 
         public static Object Main(string operation, object[] token, object[] args)
         {
-            if (operation == "init") return init(args);
+            if (operation == "init") return init();
             
             
             if (operation == "foo")
@@ -195,42 +200,31 @@ namespace Example
         {
             return true;
         }
-
+        
+        //this method is a must-defined method if you want to use native auth contract. 
         public static bool init()
         {
             object[] _args = new object[1]; 
+            _args[0] = new initContractAdminParam { adminOntID = adminOntID };
 
-            initContractAdminParam param;
-            param.adminOntID = adminOntID;
-
-            _args[0] = Neo.SmartContract.Framework.Helper.Serialize(param);
-            byte[] ret = AuthContract("initContractAdmin", _args);
-
+            byte[] ret = Native.Invoke(0, authContractAddr, "initContractAdmin", _args);
             return ret[0] == 1;
         }
 
-        public static bool verifyToken(string operation, object[] token)
+        internal static bool verifyToken(string operation, object[] token)
         {
             object[] _args = new object[1];
-
-            verifyTokenParam param;
+            verifyTokenParam param = new verifyTokenParam{}; 
             param.contractAddr = ExecutionEngine.ExecutingScriptHash;
             param.fn = operation;
             param.caller = (byte[])token[0];
             param.keyNo = (int)token[1];
-
-            _args[0] = param.Serialize();
-            byte[] ret = AuthContract("verifyToken", _args);
-
+            _args[0] = param;
+            
+            byte[] ret = Native.Invoke(0, authContractAddr, "verifyToken", _args);
             return ret[0] == 1;
         }
     }
 }
 
-
-
 ```
-
-
-
-
