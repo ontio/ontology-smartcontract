@@ -6,6 +6,32 @@
               "name":"init",
               "parameters":
               [
+                {
+                  "name":"initParams",
+                  "type":"Array",
+                  "subType":
+                  [
+                    {
+                      "name":"",
+                      "type":"Struct",
+                      "subType":
+                      [
+                        {
+                          "name":"Key",
+                          "type":"String"
+                        },
+                        {
+                          "name":"Value",
+                          "type":"String"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name":"adminAddress",
+                  "type":"Address"
+                }
               ],
               "returntype":"Bool"
             },
@@ -26,6 +52,17 @@
               [
                 {
                   "name":"adminAddress",
+                  "type":"Address"
+                }
+              ],
+              "returntype":"Bool"
+            },
+            {
+              "name":"setOperator",
+              "parameters":
+              [
+                {
+                  "name":"operatorAddress",
                   "type":"Address"
                 }
               ],
