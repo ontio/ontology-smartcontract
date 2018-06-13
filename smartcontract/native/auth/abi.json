@@ -30,7 +30,7 @@
             "returntype":"Bool"
         },
         {
-            "name":"funcsToRole",
+            "name":"assignFuncsToRole",
             "parameters":[
                 {
                     "name":"contractAddr",
@@ -62,7 +62,7 @@
             "returntype":"Bool"
         },
         {
-            "name":"ontIDsToRole",
+            "name":"assignOntIDsToRole",
             "parameters":[
                 {
                     "name":"contractAddr",
@@ -166,7 +166,7 @@
                 },
                 {
                     "name":"fn",
-                    "type":"ByteArray"
+                    "type":"String"
                 },
                 {
                     "name":"keyNo",
