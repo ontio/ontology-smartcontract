@@ -112,7 +112,7 @@
                 {
                     "name":"account",
                     "type":"Address"
-                },
+                }
             ],
             "returntype":"Int"
         },
@@ -121,9 +121,13 @@
             "parameters":
             [
                 {
-                    "name":"account",
+                    "name":"from",
                     "type":"Address"
                 },
+                {
+                    "name":"to",
+                    "type":"Address"
+                }
             ],
             "returntype":"Int"
         }

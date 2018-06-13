@@ -121,7 +121,11 @@
             "parameters":
             [
                 {
-                    "name":"account",
+                    "name":"from",
+                    "type":"Address"
+                },
+                {
+                    "name":"to",
                     "type":"Address"
                 }
             ],
