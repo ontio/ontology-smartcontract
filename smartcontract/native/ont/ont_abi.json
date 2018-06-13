@@ -15,20 +15,26 @@
             [
                 {
                     "name": "transfers",
-                    "type": "Struct",
+                    "type": "Array",
                     "subType":
                     [
                         {
-                            "name":"from",
-                            "type":"Address"
-                        },
-                        {
-                            "name":"to",
-                            "type":"Address"
-                        },
-                        {
-                            "name":"value",
-                            "type":"Int"
+                            "name":"",
+                            "type":"Struct",
+                            "subType":[
+                                {
+                                    "name":"from",
+                                    "type":"Address"
+                                },
+                                {
+                                    "name":"to",
+                                    "type":"Address"
+                                },
+                                {
+                                    "name":"value",
+                                    "type":"Int"
+                                }
+                            ]
                         }
                     ]
                 }
