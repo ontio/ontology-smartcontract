@@ -27,6 +27,18 @@ arguments:
 
 returns: bool， error
 ```
+### UnRegisterCandidate
+function: cancel apply for a candidate node, draw back deposit ONT.
+
+```text
+method: "unRegisterCandidate"
+
+arguments:
+0       String       peer public key
+1       Address      address
+
+returns: bool， error
+```
 ### ApproveCandidate
 function: review by administrator, become candidate node, only can be invoked by administrator.
 
