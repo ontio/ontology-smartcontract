@@ -155,38 +155,27 @@ using System.Numerics;
 
 namespace Example
 {
-    public struct initContractAdminParam
-    {
-        public byte[] adminOntID;
-    }
-
-    public struct verifyTokenParam
-    {
-        public byte[] contractAddr;
-        public byte[] caller;
-        public string fn;
-        public int keyNo;
-    }
-
     public class AppContract : SmartContract
     {
-        //the admin ONT ID of this contract must be hardcoded.
-        public static readonly byte[] adminOntID = { 
-                0x64, 0x69, 0x64, 0x3a, 0x6f, 0x6e, 0x74, 0x3a, 
-                0x41, 0x47, 0x68, 0x76, 0x33, 0x6f, 0x63, 0x69, 
-                0x59, 0x64, 0x6d, 0x57, 0x66, 0x62, 0x65, 0x33, 
-                0x72, 0x77, 0x67, 0x35, 0x41, 0x76, 0x43, 0x57,
-                0x4b, 0x37, 0x33, 0x72, 0x65, 0x39, 0x41, 0x57,
-                0x56, 0x39 };
-        public static readonly byte[] authContractAddr = {
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-                0x00, 0x00, 0x00, 0x06 };
+        public struct initContractAdminParam
+        {
+            public byte[] adminOntID;
+        }
 
+        public struct verifyTokenParam
+        {
+            public byte[] contractAddr;
+            public byte[] caller;
+            public string fn;
+            public int keyNo;
+        }
+                
+        //the admin ONT ID of this contract must be hardcoded.
+        public static readonly byte[] adminOntID = "did:ont:AGhv3ociYdmWfbe3rwg5AvCWK73re9AWV9".AsByteArray();
+        
         public static Object Main(string operation, object[] token, object[] args)
         {
             if (operation == "init") return init();
-            
             
             if (operation == "foo")
             {
@@ -207,24 +196,27 @@ namespace Example
         //this method is a must-defined method if you want to use native auth contract. 
         public static bool init()
         {
-            object[] _args = new object[1]; 
-            _args[0] = new initContractAdminParam { adminOntID = adminOntID };
-
-            byte[] ret = Native.Invoke(0, authContractAddr, "initContractAdmin", _args);
+            byte[] authContractAddr = {
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x06 };
+            byte[] ret = Native.Invoke(0, authContractAddr, "initContractAdmin", adminOntID);
             return ret[0] == 1;
         }
 
         internal static bool verifyToken(string operation, object[] token)
         {
-            object[] _args = new object[1];
             verifyTokenParam param = new verifyTokenParam{}; 
             param.contractAddr = ExecutionEngine.ExecutingScriptHash;
             param.fn = operation;
             param.caller = (byte[])token[0];
             param.keyNo = (int)token[1];
-            _args[0] = param;
             
-            byte[] ret = Native.Invoke(0, authContractAddr, "verifyToken", _args);
+            byte[] authContractAddr = {
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x06 };  
+            byte[] ret = Native.Invoke(0, authContractAddr, "verifyToken", param);
             return ret[0] == 1;
         }
     }
