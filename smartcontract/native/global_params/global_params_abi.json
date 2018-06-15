@@ -104,7 +104,13 @@
                 {
                   "name":"paramNameList",
                   "type":"Array",
-                  "subType":"String"
+                  "subType":
+                  [
+                    {
+                      "name":"",
+                      "type":"String"
+                    }
+                  ]
                 }
               ],
               "returntype":"Array",
