@@ -1,7 +1,7 @@
 English / [中文](./ontid_cn.md)
 
 <h1 align="center">Ontology Distributed Identification</h1>
-<p align="center" class="version">Contract Version 1.0</p>
+<p align="center" class="version">Version 0.9</p>
 
 “Entity” refers to individuals, legal entities (organizations, enterprises, institutions, etc.), objects (mobile phones, automobiles, IoT devices, etc.), and contents (articles, copyrights, etc.) in the real world, and “identity” refers to the entity's identity within the network. Ontology uses Ontology Identifier (ONT ID) to identify and manage the entities' identities. On Ontology Blockchain, one entity can correspond to multiple individual identities, and there is no relation between multiple identities.
 
@@ -348,11 +348,9 @@ The public key data of type byte array follows [ontology-crypto serialization](h
 
 The recovery account can implement a variety of access control logic, such as (m,n)-threshold control. A (m,n) threshold control account is managed by n public keys altogether. To use it, you have to gather at least m valid signatures.
 
-- `(m, n) threshold` control account
+- `(m, n)` threshold control account
 
-	```
-	0x02 || RIPEMD160(SHA256(n || m || publicKey_1 || ... || publicKey_n))
-	```
+   Multi-signature address is used as the threshold control account.
 
 - `AND` control account
    

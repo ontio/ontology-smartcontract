@@ -1,7 +1,7 @@
 [English](./ontid.md) / 中文
 
 <h1 align="center">本体分布式身份标识</h1>
-<p align="center" class="version">Contract Version 1.0</p>
+<p align="center" class="version">Version 0.9</p>
 
 
 实体是指现实世界中的个人、组织（组织机构、企事业单位等）、物品（手机、汽车、IOT设备等）、内容（文章、版权等），而身份是指实体在网络上的对应标识。本体使用本体⾝份标识（ONT ID）来标识和管理实体的网络身份。在本体上，⼀个实体可以对应到多个身份标识，且多个身份标识之间没有任何关联。
@@ -343,11 +343,9 @@ ddo {
 
 恢复帐户可以实现各种访问控制逻辑，如（m，n）- 门限控制。 一个（m，n）门限控制账户由n个公钥共同管理。 要使用它，您必须至少收集m个有效签名。
 
-- `(m, n) threshold` 控制账户
+- `(m, n)` 门限控制账户
 
-	```
-	0x02 || RIPEMD160(SHA256(n || m || publicKey_1 || ... || publicKey_n))
-	```
+   门限控制账户使用多签名地址实现。
 
 - `AND` 控制账户
    
