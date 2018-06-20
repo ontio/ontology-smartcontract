@@ -1,7 +1,7 @@
 [English](./ontid.md) / 中文
 
 <h1 align="center">本体分布式身份标识</h1>
-<p align="center" class="version">Contract Version 1.0</p>
+<p align="center" class="version">Version 0.9</p>
 
 
 实体是指现实世界中的个人、组织（组织机构、企事业单位等）、物品（手机、汽车、IOT设备等）、内容（文章、版权等），而身份是指实体在网络上的对应标识。本体使用本体⾝份标识（ONT ID）来标识和管理实体的网络身份。在本体上，⼀个实体可以对应到多个身份标识，且多个身份标识之间没有任何关联。
@@ -21,12 +21,12 @@ ONT ID 生成算法：
 为了防止用户错误输入ONT ID，我们定义一个合法的ONT ID必须包含4个字节的校验数据。下面详细描述一下如何生成一个合法的ONT ID。
 
  1. 生成32字节临时随机数nonce，计算h = Hash160(nonce），data = VER || h；
- 2. 计算出data的一个4字节校验，即checksum = SHA256(SHA256(data))[0:3]；
+ 2. 计算出data的一个4字节校验，即checksum = SHA256(SHA256(data))[0:4]；
  3. 令idString = base58(data || checksum)；
  4. 将"did:ont:"与idString拼接，即 ontId = "did:ont:" || idString；
  5. 输出ontId。
 
-如上所述，`<ont>`是网络标识符，`<VER>`是1个字节的版本标签。 在ONT中，`<VER> = 41，<ont> =“ont”`。 也就是说，ONTology中身份的前8个字节是“did：ont：”，外加一个25字节长的idString，构成一个完整的ONT ID。
+如上所述，`<ont>`是网络标识符，`<VER>`是1个字节的版本标签。 在ONT中，`<VER> = 0x41，<ont> =“ont”`。 也就是说，ONTology中身份的前8个字节是“did：ont：”，外加一个25字节长的idString，构成一个完整的ONT ID。
 
 ### 1.2 自主管理
 
@@ -343,11 +343,9 @@ ddo {
 
 恢复帐户可以实现各种访问控制逻辑，如（m，n）- 门限控制。 一个（m，n）门限控制账户由n个公钥共同管理。 要使用它，您必须至少收集m个有效签名。
 
-- `(m, n) threshold` 控制账户
+- `(m, n)` 门限控制账户
 
-	```
-	0x02 || RIPEMD160(SHA256(n || m || publicKey_1 || ... || publicKey_n))
-	```
+   门限控制账户使用多签名地址实现。
 
 - `AND` 控制账户
    
