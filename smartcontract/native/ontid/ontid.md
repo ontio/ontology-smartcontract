@@ -19,12 +19,12 @@ ONT ID generation algorithm:
 
 To prevent the user from entering the ONT ID by mistake, we define a valid ONT ID that must contain 4 bytes of verification data. We are going to describe in detail how to generate a valid ONT ID.
  1. Generate a 32-byte temporary random nonce, and calculate h = Hash160 (nonce), data = `<VER>` || h;
- 2. Calculate a 4-byte verification data, that is, checksum = SHA256(SHA256(data))[0:3];
+ 2. Calculate a 4-byte verification data, that is, checksum = SHA256(SHA256(data))[0:4];
  3. Make idString = base58(data || checksum);
  4. Concat "did:`<ont>`:" with idString, that is, ontId = "did:`<ont>`:" || idString;
  5. Output ONT ID.
 
-As above, `<ont>` is a network identifier, and `<VER>` is a 1 byte version label. In ONT, `<VER> = 41, <ont> = "ont"`. That is to say , the first 8 bytes of identity in Ontology are "did:ont:", plus a 25 byte long idString, which constitutes a complete ONT ID.
+As above, `<ont>` is a network identifier, and `<VER>` is a 1 byte version label. In ONT, `<VER> = 0x41, <ont> = "ont"`. That is to say , the first 8 bytes of identity in Ontology are "did:ont:", plus a 25 byte long idString, which constitutes a complete ONT ID.
 
 ### 1.2 Self-management
 Ontology applies digital signature technology to guarantee entities have rights to manage their own identities. The ONT ID is bound to the entity's public key when it registers, thereby indicating its ownership. The use of the ONT ID and the modification of its attributes require the owner's digital signature. The entity can independently determine the scope of use of its ONT ID and set the public key bounded by ONT ID and manage the attributes of the ONT ID.
