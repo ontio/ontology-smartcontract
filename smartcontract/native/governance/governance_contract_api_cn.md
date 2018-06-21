@@ -25,6 +25,17 @@
 
 返回值：bool， error
 ```
+### UnRegisterCandidate
+功能：取消申请成为候选节点，解冻抵押的ONT。 
+```text
+方法名："unRegisterCandidate"
+
+参数：
+0       String       节点公钥
+1       Address      钱包地址
+
+返回值：bool， error
+```
 ### ApproveCandidate
 功能：管理员审核通过，成为候选节点，只有管理员能够调用。
 
