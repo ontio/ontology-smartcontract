@@ -2,7 +2,7 @@
 
 1. Sign in your account. If you don't have an account yet, please refer to the document - SmartX Tutorial 
 
-![Sign in](https://upload-images.jianshu.io/upload_images/150344-01345c0254d9389a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Sign in]()
 
 2. Click "Create Project" button and then choose the programming language you like. 
 3. Select the "Hello World" template and enter the smart contract name -  MyHello.
@@ -14,9 +14,9 @@
 ![edit page.png](https://upload-images.jianshu.io/upload_images/150344-edb6ff59dcbccc42.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-5. Click "Compile" button to compile the code. You will get ABI file and NVM bytecode file after compilation.
+5. Click "Compile" button to compile the code. You will get ABI file and AVM bytecode file after compilation.
 
-![compile.png](https://upload-images.jianshu.io/upload_images/150344-1d394658d8ab10de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![compile.png](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fstjgqfhd5j30ez0me0u7.jpg)
 
 6. Click "Next" button, fill in the information and then click "Deploy" button;
 

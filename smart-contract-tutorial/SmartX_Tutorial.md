@@ -12,21 +12,23 @@ In the future, SmartX will work like GitHub to be a distributed software project
 
 First you should create a ONT ID to manage your smart contract project. Click the "Sign Up" button in the home page to enter the registration page as figure shows.
 
-![sign up](http://upload-images.jianshu.io/upload_images/150344-235fa082b9f24b37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sign up](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fstiyin8yaj319e0os78v.jpg)
 
 After entering the password twice (the password length should be greater than 6), clicking the "Create a New ONT ID" button to sign up successfully.You need to click the "Download" button to download the ONTID file and back up the private key.The ONTID file stores your encrypted ONTID and private key, and the private key is the only credential for you to recover the ONTID account and must be properly kept.
 
-![ONT ID file](http://upload-images.jianshu.io/upload_images/150344-55653b3ce0a9e7c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![ONT ID file](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstj2bsv5xj30sh0icjtk.jpg)
+
+![](http://wx4.sinaimg.cn/mw690/0060lm7Tly1fstj32gzk8j30o80iimz7.jpg)
 
 If you already have the ONT ID, you can click the "Recovery your ONT ID" button to recover the ONTID. After entering the private key and two passwords, click the "Recovery Your ONTID" button to register successfully.
 
-![recovery](http://upload-images.jianshu.io/upload_images/150344-a34df88163525e5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![recovery](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstj5gqw3xj30np0jdmyy.jpg)
 
 ## Sign In
 
 After registration, you already have the ONT ID file. You just need to select this file and enter the password to sign in as shown in the figure.
 
-![sign in](http://upload-images.jianshu.io/upload_images/150344-22c04e43f93853cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sign in](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fstj6i5no6j30o00lcac9.jpg)
 
 After signed in, you will enter the project list page. You can choose to open an existing smart contract project or create a new one.
 
@@ -35,14 +37,13 @@ After signed in, you will enter the project list page. You can choose to open an
 ## Step 1 - Write & Compile  
 
 we have built the [Smartx](http://smartx.ont.io) to help you with all these things.
-We now support smart contracts that run in **NeoVM** and **WasmVM**.
+We now support smart contracts that run in **NeoVM**.
 
 * **For NeoVM**, please refer [SmartX](http://smartx.ont.io) to write, compile, deploy, and invoke smart contracts. 
-* **For WASMVM**, please refer to [Wasm Smart Contract](README_wasm.md).
 
 First, you create a project and choose a language you are good at to write your smart contract.
 
-![Select language](https://s1.ax1x.com/2018/03/24/9bxJYR.png)
+![Select language](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstjbsyc5uj30jd0dcaai.jpg)
 
 Then you enter the main editor page and the middle area is the contract editor. The bottom area prints the running output and the right area is the operation panel.
 

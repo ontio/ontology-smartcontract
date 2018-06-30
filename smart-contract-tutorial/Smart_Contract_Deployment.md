@@ -59,7 +59,7 @@ const tx = makeDeployCodeTransaction(avmCode, name, version, author, email, desc
 signTransaction(tx, privateKey)
 ````
 
-After constructing the transaction object according to the above steps, it is necessary to send the transaction to the blockchain. There are many ways to send transactions. For more information, please refer to [How to invoke a contract] ( ).
+After constructing the transaction object according to the above steps, it is necessary to send the transaction to the blockchain. There are many ways to send transactions. For more information, please refer to [How to invoke a contract] ( ./Smart_Contract_Invocation.md).
 
 Here we use the method in the TS SDK as an example to illustrate the process of sending a transaction.
 
@@ -67,7 +67,7 @@ Here we use the method in the TS SDK as an example to illustrate the process of 
 import { RestClient } from 'Ont''
 const restClient = new RestClient('http://polaris1.ont.io');
 restClient.sendRawTransaction(tx.serialize()).then(res => {
-console.log(res);
+	console.log(res);
 })
 ````
 
@@ -83,13 +83,13 @@ The result returned by this request is as follows:
 }
 ````
 
-```Result``` is the hash of this transaction, which can be used to query whether the transaction is successful on the blockchain explorer.
+```Result``` is the hash of this transaction, which can be used to query whether the transaction is successfully executed.
 
 We can also query the execution result of the transaction via the restful interface.
 
 ````
 restClient.getSmartCodeEvent('70b81e1594afef4bb0131602922c28f47273e1103e389441a2e18ead344f4bd0').then(res => {
-console.log(res);
+	console.log(res);
 })
 ````
 
@@ -119,7 +119,7 @@ Suppose we know that the hash value of the contract is **bcb08a0977ed986612c29cc
 
 ````
 restClient.getContract('bcb08a0977ed986612c29cc9a7cbf92c6bd66d86').then(res => {
-console.log(res)
+	console.log(res)
 })
 ````
 
@@ -127,7 +127,7 @@ If the request returns the avm content of the contract, the contract has been su
 
 ## Contract deployment by SmartX
 
-[SmartX](http://smartx.ont.io) is a one-stop tool for developers to write, deploy, and invoke smart contracts. For specific instructions, please refer to [smart document]().
+[SmartX](http://smartx.ont.io) is a one-stop tool for developers to write, deploy, and invoke smart contracts. For specific instructions, please refer to [smart document](./SmartX_Tutorial.md).
 
 ![](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fss9ydpl3ij30f90m840c.jpg)
 
