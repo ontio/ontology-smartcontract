@@ -14,13 +14,13 @@ First you should create a ONT ID to manage your smart contract project. Click th
 
 ![sign up](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fstiyin8yaj319e0os78v.jpg)
 
-After entering the password twice (the password length should be greater than 6), clicking the "Create a New ONT ID" button to sign up successfully.You need to click the "Download" button to download the ONTID file and back up the private key.The ONTID file stores your encrypted ONTID and private key, and the private key is the only credential for you to recover the ONTID account and must be properly kept.
+After entering the password twice (the password length should be greater than 6), clicking the "Create a New ONT ID" button to sign up successfully.You need to click the "Download" button to download the ONT ID file and back up the private key.The ONT ID file stores your encrypted ONT ID and private key, and the private key is the only credential for you to recover the ONT ID account and must be properly kept.
 
 ![ONT ID file](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstj2bsv5xj30sh0icjtk.jpg)
 
 ![](http://wx4.sinaimg.cn/mw690/0060lm7Tly1fstj32gzk8j30o80iimz7.jpg)
 
-If you already have the ONT ID, you can click the "Recovery your ONT ID" button to recover the ONTID. After entering the private key and two passwords, click the "Recovery Your ONTID" button to register successfully.
+If you already have the ONT ID, you can click the "Recovery your ONT ID" button to recover the ONT ID. After entering the private key and two passwords, click the "Recovery Your ONT ID" button to get your ONT ID successfully.
 
 ![recovery](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstj5gqw3xj30np0jdmyy.jpg)
 
