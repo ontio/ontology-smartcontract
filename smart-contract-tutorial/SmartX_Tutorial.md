@@ -20,7 +20,7 @@ After entering the password twice (the password length should be greater than 6)
 
 ![](http://wx4.sinaimg.cn/mw690/0060lm7Tly1fstj32gzk8j30o80iimz7.jpg)
 
-If you already have the ONT ID, you can click the "Recovery your ONT ID" button to recover the ONT ID. After entering the private key and two passwords, click the "Recovery Your ONT ID" button to get your ONT ID successfully.
+If you already have the ONT ID, you can click the "Recover your ONT ID" button to recover the ONT ID. After entering the private key and two passwords, click the "Recovery Your ONT ID" button to get your ONT ID successfully.
 
 ![recovery](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fstj5gqw3xj30np0jdmyy.jpg)
 
