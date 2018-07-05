@@ -22,6 +22,10 @@
 | Header.Timestamp                | uint          | 获得区块的时间戳                   |
 | Header.ConsensusData            | ulong         | 获得该区块的共识数据（共识节点生成的伪随机数）    |
 | Header.NextConsensus            | byte[]        | 获得下一个记账合约的散列值              |
+
+
+| API                             | 返回值           | 说明                         |
+| ------------------------------- | ------------- | -------------------------- |
 | Block.GetTransactionCount()     | int           | 获得当前区块中交易的数量               |
 | Block.GetTransactions()         | Transaction[] | 获得当前区块中所有的交易               |
 | Block.GetTransaction(int index) | Transaction   | 获得当前区块中指定的交易               |
