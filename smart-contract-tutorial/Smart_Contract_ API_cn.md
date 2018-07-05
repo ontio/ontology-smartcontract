@@ -41,8 +41,8 @@
 | API                                      | 返回值            | 说明          |
 | ---------------------------------------- | -------------- | ----------- |
 | Contract.Script                          | byte[]         | 获得该合约的脚本    |
-| Contract.Create(byte[] script, string name, string version, string author, string email, string desc) | Contract       | 发布智能合约      |
-| Contract.Migrate(byte[] script, string name, string version, string author, string email, string desc) | Contract       | 迁移 / 更新智能合约 |
+| Contract.Create(byte[] script, bool need_storage, string name, string version, string author, string email, string desc) | Contract       | 发布智能合约      |
+| Contract.Migrate(byte[] script, bool need_storage, string name, string version, string author, string email, string desc) | Contract       | 迁移 / 更新智能合约 |
 | Contract.Destroy()                       | void           | 销毁合约        |
 | Contract.StorageContext                  | StorageContext | 获得合约的存储上下文  |
 
