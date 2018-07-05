@@ -42,8 +42,8 @@ Contract API：
 | API                                      | Return Value            | Description          |
 | ---------------------------------------- | -------------- | ----------- |
 | Contract.Script                          | byte[]         | Get the script of a contract    |
-| Contract.Create(byte[] script, string name, string version, string author, string email, string desc) | Contract       | Create a smart contract      |
-| Contract.Migrate(byte[] script, string name, string version, string author, string email, string desc) | Contract       | Migrate / Update a smart contract |
+| Contract.Create(byte[] script, bool need_storage, string name, string version, string author, string email, string desc) | Contract       | Create a smart contract      |
+| Contract.Migrate(byte[] script, bool need_storage, string name, string version, string author, string email, string desc) | Contract       | Migrate / Update a smart contract |
 | Contract.Destroy()                       | void           | Deatroy a smart contract        |
 | Contract.StorageContext                  | StorageContext | Get the contract's storage context  |
 
