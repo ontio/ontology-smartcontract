@@ -131,6 +131,17 @@
 
 返回值：bool， error
 ```
+### WithdrawOng
+功能：提取解绑ong。
+
+```text
+方法名："withdrawOng"
+
+参数：
+0       Address         钱包地址
+
+返回值：bool， error
+```
 ### CommitDpos
 功能：共识切换，按照当前投票结果切换共识，系统方法。
 

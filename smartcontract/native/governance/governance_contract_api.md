@@ -134,6 +134,17 @@ arguments:
 
 returns: bool， error
 ```
+### WithdrawOng
+function: withdraw unfreezed ONT deposited.
+
+```text
+method: "withdrawOng"
+
+arguments:
+0       Address         address
+
+returns: bool， error
+```
 ### CommitDpos
 function: change consensus according to vote result, system invoke.
 
