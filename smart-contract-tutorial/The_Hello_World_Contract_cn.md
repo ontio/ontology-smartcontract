@@ -27,4 +27,4 @@
 
 ![输出.png](https://upload-images.jianshu.io/upload_images/150344-9bb61d0bb6b31aea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
+[更多模板示例](https://github.com/ontio/ontology-smartcontract/tree/master/smart-contract-tutorial/examples)
