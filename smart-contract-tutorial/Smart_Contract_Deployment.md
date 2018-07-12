@@ -14,6 +14,18 @@ Contract deployment require users to build specific transactions and send them t
 
 Ontology provides different SDK and contract development tools SmartX to help users deploy contracts.
 
+## Calculate the gas consumed by deploying a smart contract
+
+Through the pre-execution to a smart contract, the `Gaslimit` required for the current contract execution can be obtained, which provides a reference for `Gaslimit` setting in real execution and avoids execution failure due to insufficient **ONG** balance.
+
+```
+$ ./ontology contract invoke --address 79102ef95cf75cab8e7f9a583c9d2b2b16fbce70 --params string:Hello,[string:Hello] --prepare --return bool
+Invoke:70cefb162b2b9d3c589a7f8eab5cf75cf92e1079 Params:["Hello",["Hello"]]
+Contract invoke successfully
+  Gaslimit:20000
+  Return:true
+```
+
 ## Contract deployment by SDK
 
 Ontology provides different SDKs. Here we use the [Typescript SDK](https://github.com/ontio/ontology-ts-sdk)as an example to illustrate the process of deploying a contract.
