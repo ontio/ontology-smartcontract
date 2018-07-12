@@ -8,11 +8,23 @@
 
 目前，在测试网上部署合约，费用可以设为0。
 
-## 如何部署
+## 如何部署合约
 
 部署合约需要用户构建特定的交易，并发送到区块链上执行。当交易执行完成后，合约就部署完成。
 
 Ontology提供了不同的SDK和合约开发工具SmartX，帮助用户部署合约。
+
+## 部署合约所需gas消耗计算
+
+通过智能合约的预执行，可以获得当前合约执行所需要的`Gaslimit`,从而为智能合约的实际执行设置`Gaslimit`设置提供参考，避免由于**ONG**余额不足造成的执行失败。
+
+```
+$ ./ontology contract invoke --address 79102ef95cf75cab8e7f9a583c9d2b2b16fbce70 --params string:Hello,[string:Hello] --prepare --return bool
+Invoke:70cefb162b2b9d3c589a7f8eab5cf75cf92e1079 Params:["Hello",["Hello"]]
+Contract invoke successfully
+  Gaslimit:20000
+  Return:true
+```
 
 ## 通过SDK部署合约
 
