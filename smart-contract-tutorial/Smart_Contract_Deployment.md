@@ -71,7 +71,7 @@ const tx = makeDeployCodeTransaction(avmCode, name, version, author, email, desc
 signTransaction(tx, privateKey)
 ````
 
-After constructing the transaction object according to the above steps, it is necessary to send the transaction to the blockchain. There are many ways to send transactions. For more information, please refer to [How to invoke a contract] (./Smart_Contract_Invocation.md).
+After constructing the transaction object according to the above steps, it is necessary to send the transaction to the blockchain. There are many ways to send transactions. For more information, please refer to [How to invoke a contract](./Smart_Contract_Invocation.md).
 
 Here we use the method in the TS SDK as an example to illustrate the process of sending a transaction.
 
