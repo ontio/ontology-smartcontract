@@ -139,7 +139,8 @@ If the request returns the avm content of the contract, the contract has been su
 
 ## Contract deployment by SmartX
 
-[SmartX](http://smartx.ont.io) is a one-stop tool for developers to write, deploy, and invoke smart contracts. For specific instructions, please refer to [smart document](https://github.com/ontio/ontology-smartcontract/blob/master/smart-contract-tutorial/SmartX_Tutorial.md).
+[SmartX](http://smartx.ont.io) is a one-stop tool for developers to write, deploy, and invoke smart contracts.
+For specific instructions, please refer to [smart document](https://github.com/ontio/ontology-smartcontract/blob/master/smart-contract-tutorial/SmartX_Tutorial.md).
 
 ![](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fss9ydpl3ij30f90m840c.jpg)
 
