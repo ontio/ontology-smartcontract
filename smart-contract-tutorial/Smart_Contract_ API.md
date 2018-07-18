@@ -80,10 +80,10 @@ System API：
 
 | API                        | Return Value              | Description                         |
 | -------------------------- | ---------------- | -------------------------- |
-| System.ScriptContainer     | IScriptContainer | Get script container of a smart contract              |
-| System.ExecutingScriptHash | byte[]           | Get the script hash that a smart contract executes          |
-| System.CallingScriptHash   | byte[]           | Get the script hash of the invoker of a smart contract         |
-| System.EntryScriptHash     | byte[]           | Get the script hash of the entry point (start of the contract invocation chain) of a smart contract |
+| ExecutionEngine.ScriptContainer     | IScriptContainer | Get script container of a smart contract              |
+| ExecutionEngine.ExecutingScriptHash | byte[]           | Get the script hash that a smart contract executes          |
+| ExecutionEngine.CallingScriptHash   | byte[]           | Get the script hash of the invoker of a smart contract         |
+| ExecutionEngine.EntryScriptHash     | byte[]           | Get the script hash of the entry point (start of the contract invocation chain) of a smart contract |
 
 
 System API：
