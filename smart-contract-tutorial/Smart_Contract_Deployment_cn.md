@@ -138,7 +138,7 @@ restClient.getContract('bcb08a0977ed986612c29cc9a7cbf92c6bd66d86').then(res => {
 
 ## 通过SmartX部署合约
 
-[SmartX](http://smartx.ont.io) 是开发者编写、部署和调用智能合约的一站式工具。具体使用说明请参考[smart文档]()。
+[SmartX](http://smartx.ont.io) 是开发者编写、部署和调用智能合约的一站式工具。具体使用说明请参考[smart文档](https://github.com/ontio/ontology-smartcontract/blob/master/smart-contract-tutorial/SmartX_Tutorial_cn.md)。
 
 ![](https://upload-images.jianshu.io/upload_images/150344-1186fa3b18f9752f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
