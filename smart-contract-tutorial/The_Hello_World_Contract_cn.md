@@ -1,6 +1,10 @@
 <h1 align="center">"Hello World"合约</h1>
 
-1. 登录您的SmartX账户，如果您目前还没有账户，请参考文档[SmartX 教程]();
+<p align="center" class="version">Version 1.0.0 </p>
+
+[English](The_Hello_World_Contract.md) / 中文
+
+1. 登录您的SmartX账户，如果您目前还没有账户，请参考文档[SmartX 教程](SmartX_Tutorial_cn.md);
 
 ![登录.png](https://upload-images.jianshu.io/upload_images/150344-e3848962a4dfe0d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

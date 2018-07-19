@@ -1,4 +1,7 @@
 <h1 align="center">Introduction of Ontology Smart Contract</h1>
+<p align="center" class="version">Version 1.0.0 </p>
+
+English / [中文](Introduction_of_Ontology_Smart_Contract_cn.md)
 
 ## What is smart contract
 
@@ -13,7 +16,7 @@ Ontology Smart Contract possesses dynamic features, including high scalability, 
 Ontology smart contract have certainty, high-performance, and expandable features. It includes two modules: Interactive Service and Virtual Machine. Interactive Service provides interaction between virtual machine and blockchain ledger. Virtual Machine provides smart contract execution environment. Interactive Service includes native service and NeoVM service. Native service provides special smart contract implementation in the blockchain, which can be quickly and conveniently used. NeoVM service provides the API of NeoVM to communicate externally, which can enhance the invoke function of the smart contract. 
 
 
-![ontology smart contract architecture.png](https://github.com/xavizhao/cache/blob/master/Screen%20Shot%202018-07-03%20at%2012.21.01%20PM.png)
+![ontology smart contract architecture.png](./images/smartcontract_architecture.png)
 
 
 
@@ -22,7 +25,7 @@ Ontology smart contract have certainty, high-performance, and expandable feature
 Ontology Smart Contract currently supports two types of contract: Native Contract and NeoVM Contract. The Native contract is a contract written directly on the underlying level of Ontology. It has high execution efficiency and is greatly optimized for common contracts. Its services include Oracle, DID, and rights management, and data exchanges will be implemented by Native contracts. The NeoVm contract is a contract that runs on the NeoVm virtual machine and you can write the corresponding contract code to implement it. The supported languages are: Java, C#, and Python. NeoVm has the features of lightweight, scalability, and high-performance. By combining the Interop Service layer, the interaction between the virtual machine and the ledger layer can be well established.
 
 
-![ontology smart contract type.png](https://github.com/xavizhao/cache/blob/master/Screen%20Shot%202018-07-03%20at%203.31.44%20PM.png)
+![ontology smart contract type.png](./images/smartcontract_type.png)
 
 
 ## Smart Contract Scheduling

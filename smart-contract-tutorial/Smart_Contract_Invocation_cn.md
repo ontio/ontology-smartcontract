@@ -1,5 +1,8 @@
-# 智能合约调用
+<h1 align="center">智能合约调用</h1>
 
+<p align="center" class="version">Version 1.0.0 </p>
+
+[English](Smart_Contract_Invocation.md) / 中文
 ### 1. 构建交易
 
 当智能合约被部署到区块链上后，我们可以通过构建交易（Transaction），调用合约中的相应方法。

@@ -1,6 +1,10 @@
 <h1 align="center">The "Hello World" Contract</h1>
 
-1. Sign in your account. If you don't have an account yet, please refer to the document - SmartX Tutorial 
+<p align="center" class="version">Version 1.0.0 </p>
+
+English / [中文](The_Hello_World_Contract_cn.md) 
+
+1. Sign in your account. If you don't have an account yet, please refer to the document - [SmartX Tutorial](SmartX_Tutorial.md) 
 
 ![Sign in](https://upload-images.jianshu.io/upload_images/150344-f8146934d44ac5d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

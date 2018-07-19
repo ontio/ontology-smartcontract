@@ -1,5 +1,9 @@
 <h1 align="center">SmartX Tutorial</h1>
 
+<p align="center" class="version">Version 1.0.0 </p>
+
+English / [中文](SmartX_Tutorial_cn.md)
+
 ## What is SmartX
 
 SmartX is a one-stop IDE that can be used to compile, deploy, and invoke smart contracts. It provides a range of smart contract templates and a powerful online editor. In the future, smart contract developers will be able to trade smart contracts they write and collaborate with others to develop a smart contract.
