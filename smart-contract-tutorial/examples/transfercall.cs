@@ -1,5 +1,5 @@
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services.Neo;
+using Ont.SmartContract.Framework;
+using Ont.SmartContract.Framework.Services.Ont;
 using System;
 using System.Numerics;
 
