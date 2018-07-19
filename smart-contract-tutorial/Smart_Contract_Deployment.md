@@ -1,5 +1,9 @@
 <h1 align="center">Smart Contract Deployment</h1>
 
+<p align="center" class="version">Version 1.0.0 </p>
+
+English / [中文](Smart_Contract_Deployment_cn.md)
+
 ## Preparation
 
 Before deploying a contract, the developer needs to prepare the contract that has been properly compiled as an .avm file.

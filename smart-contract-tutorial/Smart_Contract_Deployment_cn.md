@@ -1,4 +1,8 @@
-# 智能合约部署
+<h1 align="center">智能合约部署</h1>
+
+<p align="center" class="version">Version 1.0.0 </p>
+
+[English](Smart_Contract_Deployment.md) / 中文
 
 ## 准备工作
 

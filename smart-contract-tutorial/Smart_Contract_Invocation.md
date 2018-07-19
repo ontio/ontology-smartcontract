@@ -1,5 +1,9 @@
 <h1 align="center">Smart Contract Invocation</h1>
 
+<p align="center" class="version">Version 1.0.0 </p>
+
+English / [中文](Smart_Contract_Invocation_cn.md)
+
 ## 1. Construct a transaction
 
 When a smart contract is deployed on the blockchain, we can construct a transaction to invoke a contract's method.
