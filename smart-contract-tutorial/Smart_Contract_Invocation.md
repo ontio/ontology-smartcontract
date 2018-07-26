@@ -8,23 +8,23 @@ English / [中文](Smart_Contract_Invocation_cn.md)
 
 When a smart contract is deployed on the blockchain, we can construct a transaction to invoke a contract's method.
 
-Before constructing a transaction, we need to know the contract's abi file and the hash address of the contract.
+Before constructing a transaction, we need to know the contract's ABI file and the hash address of the contract.
 
-### What is an abi file
+### What is an ABI file?
 
-After a smart contract is written, the developer will use the corresponding compiler to compile the contract. After the compilation, the abi file and avm file will be generated. The avm file is the bytecode of the contract. When the contract is deployed on the blockchain, the contract bytecode is stored in the storage area allocated to the contract. The abi file is a JSON file that describes the specific structure of a contract, including the entry function, the interface functions, the parameter list of functions, the return value and events. From contract's abi file, we can learn about the detailed features of the contract.
+After a smart contract is written, the developer will use the corresponding compiler to compile the contract. After the compilation, the ABI file and AVM file will be generated. The AVM file is the bytecode of the contract. When the contract is deployed on the blockchain, the contract bytecode is stored in the storage area allocated to the contract. The ABI file is a JSON file that describes the specific structure of a contract, including the entry function, the interface functions, the parameter list of functions, the return value, and events. From the contract's ABI file, we can learn about the detailed features of the contract.
 
-Using SmartX as an example, we have a template contract "Arith" that can do simple addition calculation. After the contract is compiled, the abi content in JSON format will be displayed on the operation panel. Users can choose to download the abi.json file.
+Using SmartX as an example, we have a template contract "Arith" that can do simple addition calculation. After the contract is compiled, the ABI content in JSON format will be displayed on the operation panel. Users can choose to download the abi.json file.
 
 ![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fsqydcu9nzj30ep09udg9.jpg)
 
 ### What is a contract hash?
 
-A contract hash is a value obtained by performing some hash operations on the avm content of the contract. This unique value is used to distinguish different contracts. An abi file also contains contract hash.
+A contract hash is a value obtained by performing some hash operations on the AVM content of the contract. This unique value is used to distinguish different contracts. An ABI file also contains the contract hash.
 
 ### Construct a transaction by SDK
 
-We can easily construct a transaction through the SDK. Using TS SDK as an example. The contract we want to invoke is the template contract "Arith", and the method to be invoked is "Add" function of the contract.
+We can easily construct a transaction through the SDK. Using TS SDK as an example, the contract we want to invoke is the template contract "Arith", and the method to be invoked is "Add" function of the contract.
 
 ````
 import {Parameter, ParameterType, Address, reverseHex, TransactionBuilder} from 'Ont'
@@ -46,7 +46,7 @@ const gasLimit = '30000';
 const tx = TransactionBuilder.makeInvokeTransaction(funcName, [p1, p2], contractAddr, gasPrice, gasLimit)
 ````
 
-Now we follow the above steps to construct a transaction object. During the construction process, the method name and method parameters need to be consistent with the description in the abi file; otherwise, an error will occur.
+Now we follow the above steps to construct a transaction object. During the construction process, the method name and method parameters need to be consistent with the description in the ABI file; otherwise, an error will occur.
 
 Generally, executing a smart contract needs to consume gas. Therefore, gasPrice and gasLimit must be set in the transaction object. If these two values are too small, the transaction will not be packed into the block and the contract method will fail to execute. In the current TestNet, gasPrice is allowed to be set to 0, that is, it does not need to consume gas. In the MainNet, a certain amount of gas is needed  to ensure that the contract is properly invoked.
 
@@ -64,17 +64,17 @@ Now the signed transaction can be sent to the blockchain for execution.
 
 We have multiple ways to send transaction:
 
-1. Send a transaction via the rpc interface
-2. Send a transactions via the restful interface
-3. Send a transactions via the websocket
+1. Send a transaction via the RPC interface
+2. Send a transaction via the RESTful interface
+3. Send a transaction via the WebSocket
 
-Sending a transaction through the rpc and restful interfaces, the result returned is the status of the transaction and the transaction hash;
+Sending a transaction through the RPC and RESTful interfaces, the result returned is the status of the transaction and the transaction hash.
 
-Sending a transaction through websocket, if the contract method has event pushes, it can listen for pushed messages, which are usually the result of contract execution.
+Sending a transaction through WebSocket, if the contract method has event pushes, it can listen for pushed messages, which are usually the result of contract execution.
 
 We can also send a pre-executed transaction to the blockchain through the above interface. Pre-execution means that the transaction only runs on the node that received the transaction, and the result of the execution can be obtained directly from this node instead of result after blockchain consensus. By pre-executing the transaction, it can easily verify whether the transaction is constructed correctly and the gas is expected to consume.
 
-We use the restful interface of the TS SDK as an example to show how to send a transaction.
+We use the RESTful interface of the TS SDK as an example to show how to send a transaction.
 
 ````
 import {RestClient} from 'Ont'
@@ -90,7 +90,7 @@ console.log(res);
 
 ## 3. Get the transaction result
 
-In the previous step, we sent the transaction to the blockchain via the restful interface. The results returned are as follows:
+In the previous step, we sent the transaction to the blockchain via the RESTful interface. The results returned are as follows:
 
 ````
 {
@@ -103,7 +103,7 @@ In the previous step, we sent the transaction to the blockchain via the restful 
 }
 ````
 
-The value of the Result field is the transaction hash. We can query the execution result of the transaction through the restful interface.
+The value of the Result field is the transaction hash. We can query the execution result of the transaction through the RESTful interface.
 
 ````
 import {RestClient} from 'Ont'
@@ -113,7 +113,7 @@ console.log(res)
 })
 ````
 
-We can query the execution result of the transaction through the restful interface of the TS SDK, or query it through web tools such as postman. The query url is as follows:
+We can query the execution result of the transaction through the restful interface of the TS SDK, or query it through web tools such as postman. The query URL is as follows:
 
 ````
 http://{{NODE_URL}}/api/v1/smartcode/event/txhash/03295a1b38573f3a40cf75ae2bdda7e7fb5536f067ff5e47de44aeaf5447259b
