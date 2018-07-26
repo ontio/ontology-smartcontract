@@ -8,15 +8,15 @@ English / [中文](Smart_Contract_Deployment_cn.md)
 
 Before deploying a contract, the developer needs to prepare the contract that has been properly compiled as an .avm file.
 
-The developer also needs Ontology's wallet account and guarantees that there are enough ONGs on the account to pay for the contract deployment.
+The developer also needs Ontology's wallet account and guarantees that there is enough ONG on the account to pay for the contract deployment.
 
-Currently, the cost can be set to 0 for deploying contracts on the test network.
+Currently, the cost can be set to 0 ONG for deploying contracts on the test network.
 
 ## How to deploy
 
-Contract deployment require users to build specific transactions and send them to the blockchain for execution. When the execution of the transaction is completed, the contract is deployed.
+Contract deployment requires users to build specific transactions and send them to the blockchain for execution. When the execution of the transaction is completed, the contract is deployed.
 
-Ontology provides different SDK and contract development tools SmartX to help users deploy contracts.
+Ontology provides different SDK and contract development tools in SmartX to help users deploy contracts.
 
 ## Calculate the gas consumed by deploying a smart contract
 
@@ -32,29 +32,29 @@ Contract invoke successfully
 
 ## Contract deployment by SDK
 
-Ontology provides different SDKs. Here we use the [Typescript SDK](https://github.com/ontio/ontology-ts-sdk)as an example to illustrate the process of deploying a contract.
+Ontology provides different SDKs. Here we use the [Typescript SDK](https://github.com/ontio/ontology-ts-sdk) as an example to illustrate the process of deploying a contract.
 
 TS SDK provides the interface for deploying a contract. The parameters of the interface are as follows:
 
-```avmCode``` contract's avm code, required parameter 
+```avmCode``` Contract's avm code. Required parameter. 
 
-```name``` contract's name. Optional parameter. The default value is an empty string.
+```name``` Contract's name. Optional parameter. The default value is an empty string.
 
-```version``` contract's version. Optional parameter. The default value is an empty string.
+```version``` Contract's version. Optional parameter. The default value is an empty string.
 
-```author``` contract's author. Optional parameter. The default value is an empty string.
+```author``` Contract's author. Optional parameter. The default value is an empty string.
 
-```email``` the email of the contract's author. Optional parameter. The default value is an empty string.
+```email``` Email of the contract's author. Optional parameter. The default value is an empty string.
 
-```desc``` the description of contract. Optional parameter. The default value is an empty string.
+```desc``` Description of contract. Optional parameter. The default value is an empty string.
 
 ```needStorage``` Whether the contract needs to be stored. Optional value. The default value is true.
 
-```gasPrice``` the gas price for contract deployment. Required value. If this value is too small, the transaction will fail to execute.
+```gasPrice``` Gas price for contract deployment. Required value. If this value is too small, the transaction will fail to execute.
 
-```gasLimit``` the gas limit for contract deployment. Required value. If this value is too small, the transaction will fail to execute.
+```gasLimit``` Gas limit for contract deployment. Required value. If this value is too small, the transaction will fail to execute.
 
-```payer``` The account address that pays deployment fee. Required value.
+```payer``` Account address that pays deployment fee. Required value.
 
 ````
 import { makeDeployCodeTransaction } from 'Ont'
@@ -141,10 +141,10 @@ restClient.getContract('bcb08a0977ed986612c29cc9a7cbf92c6bd66d86').then(res => {
 
 If the request returns the avm content of the contract, the contract has been successfully deployed to the blockchain.
 
-## Contract deployment by SmartX
+## SmartX contract deployment
 
 [SmartX](http://smartx.ont.io) is a one-stop tool for developers to write, deploy, and invoke smart contracts.
-For specific instructions, please refer to [smart document](https://github.com/ontio/ontology-smartcontract/blob/master/smart-contract-tutorial/SmartX_Tutorial.md).
+For specific instructions, please refer to the [SmartX tutorial](https://github.com/ontio/ontology-smartcontract/blob/master/smart-contract-tutorial/SmartX_Tutorial.md).
 
 ![](http://wx1.sinaimg.cn/mw690/0060lm7Tly1fss9ydpl3ij30f90m840c.jpg)
 
@@ -152,7 +152,7 @@ First, we need to compile the contract on SmartX. When the contract is successfu
 
 ![](http://wx2.sinaimg.cn/mw690/0060lm7Tly1fss9v7mp42j30ex0m5t9z.jpg)
 
-In testing network, SmartX provides a default account to pay for the fee of contract deployment and sign the transaction.
+In testing network, SmartX provides a default account to pay for the fee of contract deployment and signing the transaction.
 
-SmartX deploys the contract for us by clicking the "Deploy" button.
+SmartX deploys the contract for us when we click the "Deploy" button.
 
