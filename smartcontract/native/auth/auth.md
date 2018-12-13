@@ -12,7 +12,7 @@ Currently, the function of smart contract can be called by anyone, which obvious
 If the smart contract needs to add the rights management function, it must record the roles assigned in the contract, the functions that the role can call, which entity has this role, and so on. This work is tedious and can be managed by a system contract.
 
 In the following, we say that the contract that requires rights management functions are *App Contract*, and the system contract described in this document are *Auth Contract*.
-
+![image](./3401544691672_.pic_hd.jpg)
 ## API design
 
 ### a. Set up the administrator of an application contract 
