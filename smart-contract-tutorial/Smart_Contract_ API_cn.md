@@ -74,6 +74,11 @@
 | Runtime.CheckWitness(byte[]) | bool | 验证是否具有操作权限(包含合约或人)                       |
 | Runtime.Notify(object[])     | void | 在智能合约中向执行该智能合约的客户端发送通知(包含socket通知或rpc查询) |
 | Runtime.Log(string)          | void | 在智能合约中向执行该智能合约的客户端发送日志(socket及时通知)       |
+| Runtime.Serialize(object)    | byte[]     | 序列化元素或结构体                   |
+| Runtime.Deserialize(byte[])  | object     | 反序列化元素或结构体     |
+| Runtime.Base58ToAddress(byte[]|  byte[]    | 将base58地址转化为地址hash  |
+| Runtime.AddressToBase58(byte[])|  byte[]    | 将地址hash转化为base58地址  |
+| Runtime.GetCurrentBlockHash()|   byte[]   |    获取当前区块hash   |
 
 System API：
 
