@@ -95,11 +95,11 @@ arguments:
 
 returns: bool， error
 ```
-### VoteForPeer
-function: vote for a node by deposit ONT.
+### AuthorizeForPeer
+function: authorize for a node by deposit ONT.
 
 ```text
-method: "voteForPeer"
+method: "authorizeForPeer"
 
 arguments:
 0       Address         address
@@ -108,11 +108,11 @@ arguments:
 
 returns: bool， error
 ```
-### UnVoteForPeer
-function: uvvote for a node by redeem ONT
+### UnAuthorizeForPeer
+function: unAuthorize for a node by redeem ONT
 
 ```text
-method: "unVoteForPeer"
+method: "unAuthorizeForPeer"
 
 arguments:
 0       Address         address
@@ -223,4 +223,100 @@ arguments:
 1       Address     address
 
 returns: bool， error
+```
+
+
+### ChangeMaxAuthorization
+function：node change its max authorize amount it receives
+
+```text
+method："changeMaxAuthorization"
+
+arguments：
+0       String      peer pubkey
+1       Address     address
+2       Uint32      max authorize amount node receives
+
+returns：bool， error
+```
+
+### SetPeerCost
+function：node set the proportion it takes from node bonus
+
+```text
+method："setPeerCost"
+
+arguments：
+0       String      peer pubkey
+1       Address     address
+2       Uint32      proportion（0-100）
+
+returns：bool， error
+```
+
+### AddInitPos
+function：node add its init pos
+
+```text
+method："addInitPos"
+
+arguments：
+0       String      peer pubkey
+1       Address     address
+2       Uint32      init pos added
+
+returns：bool， error
+```
+
+### ReduceInitPos
+function：node reduce its init pos。
+
+```text
+method："reduceInitPos"
+
+arguments：
+0       String      peer pubkey
+1       Address     address
+2       Uint32      init pos reduced
+
+returns：bool， error
+```
+
+### SetPromisePos
+function：set node's promise pos
+
+```text
+method："setPromisePos"
+
+arguments：
+0       String      peer pubkey
+1       Uint32      promise pos
+
+returns：bool， error
+```
+
+### UpdateGlobalParam2
+function：set global params
+
+```text
+method："updateGlobalParam2"
+
+arguments：
+0       Uint32      multiple of authorized ont
+1       Uint32      number of node can get bonus
+2       Uint32      proportion of dapp bonus
+
+returns：bool， error
+```
+
+### SetGasAddress
+function：set dapp bonus address
+
+```text
+method："setGasAddress"
+
+arguments：
+0       Address      dapp bonus address
+
+returns：bool， error
 ```
