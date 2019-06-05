@@ -92,11 +92,11 @@
 
 返回值：bool， error
 ```
-### VoteForPeer
+### AuthorizeForPeer
 功能：通过抵押ONT的方式向节点投票。
 
 ```text
-方法名："voteForPeer"
+方法名："authorizeForPeer"
 
 参数：
 0       Address         钱包地址
@@ -105,11 +105,11 @@
 
 返回值：bool， error
 ```
-### UnVoteForPeer
+### UnAuthorizeForPeer
 功能：赎回抵押ONT的方式向节点取消投票。
 
 ```text
-方法名："unVoteForPeer"
+方法名："unAuthorizeForPeer"
 
 参数：
 0       Address         钱包地址
@@ -142,6 +142,19 @@
 
 返回值：bool， error
 ```
+
+### WithdrawFee
+功能：提取手续费分红。
+
+```text
+方法名："WithdrawFee"
+
+参数：
+0       Address         钱包地址
+
+返回值：bool， error
+```
+
 ### CommitDpos
 功能：共识切换，按照当前投票结果切换共识，系统方法。
 
@@ -199,16 +212,6 @@
 
 返回值：bool， error
 ```
-### CallSplit
-功能：管理员调用，按照上一轮投票结果进行ONG分配。
-
-```text
-方法名："callSplit"
-
-参数：无
-
-返回值：bool， error
-```
 ### TransferPenalty
 功能：取出作恶节点的扣留抵押，只能由管理员调用。
 
@@ -218,6 +221,101 @@
 参数：
 0       String      节点公钥
 1       Address     钱包地址
+
+返回值：bool， error
+```
+
+### ChangeMaxAuthorization
+功能：节点修改自己接受的最大授权ONT数量。
+
+```text
+方法名："changeMaxAuthorization"
+
+参数：
+0       String      节点公钥
+1       Address     钱包地址
+2       Uint32      接受的最大授权
+
+返回值：bool， error
+```
+
+### SetPeerCost
+功能：节点设置自己独占激励的比例。
+
+```text
+方法名："setPeerCost"
+
+参数：
+0       String      节点公钥
+1       Address     钱包地址
+2       Uint32      独占激励的比例（0-100）
+
+返回值：bool， error
+```
+
+### AddInitPos
+功能：节点增加initPos接口，只能由节点所有者调用。
+
+```text
+方法名："addInitPos"
+
+参数：
+0       String      节点公钥
+1       Address     钱包地址
+2       Uint32      增加的抵押数量
+
+返回值：bool， error
+```
+
+### ReduceInitPos
+功能：节点减少initPos接口，只能由节点所有者调用，initPos不能低于承诺值，不能低于已接受授权数量的1/10。
+
+```text
+方法名："reduceInitPos"
+
+参数：
+0       String      节点公钥
+1       Address     钱包地址
+2       Uint32      减少的抵押数量
+
+返回值：bool， error
+```
+
+### SetPromisePos
+功能：设置节点的承诺抵押，只有管理员可以调用。
+
+```text
+方法名："setPromisePos"
+
+参数：
+0       String      节点公钥
+1       Uint32      承诺抵押数量
+
+返回值：bool， error
+```
+
+### UpdateGlobalParam2
+功能：设置合约全局参数，只有管理员可以调用。
+
+```text
+方法名："updateGlobalParam2"
+
+参数：
+0       Uint32      授权的最小ONT倍数
+1       Uint32      能够分到激励的节点数
+2       Uint32      Dapp获得的奖励比例
+
+返回值：bool， error
+```
+
+### SetGasAddress
+功能：设置Dapp收钱账户地址，只有管理员可以调用，不设置默认不给Dapp账户分钱。
+
+```text
+方法名："setGasAddress"
+
+参数：
+0       Address      Dapp的收钱地址
 
 返回值：bool， error
 ```
