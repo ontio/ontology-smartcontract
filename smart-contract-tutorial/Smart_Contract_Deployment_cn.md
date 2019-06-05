@@ -75,7 +75,7 @@ const tx = makeDeployCodeTransaction(avmCode, name, version, author, email, desc
 signTransaction(tx, privateKey)
 ````
 
-按照如上步骤构造好交易对象后，接下来需要发送交易到区块链上。有多种方式发送交易。更多信息可参考文档[智能合约调用]()。
+按照如上步骤构造好交易对象后，接下来需要发送交易到区块链上。有多种方式发送交易。更多信息可参考文档[智能合约调用](Smart_Contract_Invocation_cn.md)。
 
 这里我们用TS SDK里的方法为例，说明发送交易的过程。
 
